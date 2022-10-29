@@ -22,9 +22,12 @@ public class Post {
     @JsonIgnore //serialization kısmındaki hataları engeller bu alanı ignore et demiş olduk
     User user;
 
-
     String title;
+
     @Lob
+    //Large object olarak ifade edilir,yani büyük veri tipleri için kullanılır.Her veritabanı yönetim sisteminin farklı
+    // büyük veri tipleri vardır örneğin mysql longtext diye belirtirken oracle lob diyebilir işte Lob dipnotunu
+    // verdiğimizde orm araçları bunu veritabanına göre ayarlayarak o kolonu büyük veri olarak oluşturur.
     @Column(columnDefinition = "text")  //Hibernate'in mySql de String i text olarak algılamsı için yazıldı. Yoksa varchar 255 olarka alır
     String text;
 
