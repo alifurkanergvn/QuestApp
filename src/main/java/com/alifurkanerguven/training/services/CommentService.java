@@ -42,12 +42,12 @@ public class CommentService {
         User oneUserById = userService.getOneUserById(commentCreateRequest.getUserId()); //Gelen user var mı yok mu teyit ediyoruz
         Post onePostById = postService.getOnePostById(commentCreateRequest.getPostId());
         if (oneUserById != null && onePostById != null){
-            Comment CommentToSave = new Comment();
-            CommentToSave.setId(commentCreateRequest.getId());
-            CommentToSave.setText(commentCreateRequest.getText());
-            CommentToSave.setUser(oneUserById);
-            CommentToSave.setPost(onePostById);
-            return commentRepository.save(CommentToSave);
+            Comment commentToSave = new Comment();
+            commentToSave.setId(commentCreateRequest.getId());
+            commentToSave.setText(commentCreateRequest.getText());
+            commentToSave.setUser(oneUserById);
+            commentToSave.setPost(onePostById);
+            return commentRepository.save(commentToSave);
         }
         return null;
     }

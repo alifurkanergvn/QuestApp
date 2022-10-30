@@ -3,7 +3,6 @@ package com.alifurkanerguven.training.controllers;
 import com.alifurkanerguven.training.entities.Comment;
 import com.alifurkanerguven.training.requests.CommentCreateRequest;
 import com.alifurkanerguven.training.requests.CommentUpdateRequest;
-import com.alifurkanerguven.training.requests.PostUpdateRequest;
 import com.alifurkanerguven.training.services.CommentService;
 import org.springframework.web.bind.annotation.*;
 
