@@ -3,7 +3,6 @@ package com.alifurkanerguven.training.services;
 import com.alifurkanerguven.training.entities.User;
 import com.alifurkanerguven.training.repositories.UserRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +24,7 @@ public class UserService {
         return userRepository.save(newUser);
     }
 
-    public User getOneUser(Long userId) {
+    public User getOneUserById(Long userId) {
         return userRepository.findById(userId).orElse(null);
     }
 
